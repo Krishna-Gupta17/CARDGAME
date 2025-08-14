@@ -1,0 +1,170 @@
+.header{
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom: 1px solid rgb(220, 219, 219);
+}
+.left-section{
+  display: flex;
+  align-items: center;
+  /* see here we did not give width bec in flexbox default justify-content: font-stretch:; */
+}
+.middle-section{
+  display: flex;
+  align-items: center;
+  flex: 100;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+}
+.right-section{
+  display: flex;
+  align-items: center;
+  width:200px;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.hamburger-menu{
+  height: 25px;
+  margin-left: 30px;
+  margin-right: 35px;
+}  
+.youtube-logo{
+  height: 24px;
+}
+.hamburger-menu:hover{
+  cursor: pointer;
+}
+
+.search-bar{
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 2px; 
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+  width: 0;
+}
+
+.search-bar::placeholder{
+  font-family: Roboto, Arial;
+  font-size: 15px;
+}
+
+.search-button{
+  height: 39px;
+  width: 60px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -35px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+  /* here pointer-events:none;is used bec hovering is also working on place of tooltip so to we disable overing on it by using it */
+} 
+
+.upload-icon-container ,
+.youtube-apps-icon-container ,
+.notifications-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip{
+  opacity: 1;
+}
+
+.search-icon{ 
+  height: 25px;
+  
+}
+
+.voice-search-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: rgba(170, 160, 0, 0.05);
+  border:navajowhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.voice-search-icon{
+  height: 25px;
+}
+
+.upload-icon,.youtube-apps-icon,.notifications-icon{
+  height: 25px;
+  width: 25px;
+  position: relative;
+}
+.channel-icon{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.upload-icon-container,
+.youtube-apps-icon-container
+{
+  position:relative;
+}
+
+.notifications-icon-container{
+  position: relative;
+}
+
+.notifications-count{
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  border-radius:90px;
+  background-color: red;
+  color: white;
+  font-family: Roboto,Arial;
+  font-size: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 10px;
+}
+
